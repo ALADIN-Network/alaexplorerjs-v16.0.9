@@ -1,0 +1,27 @@
+version: "2"
+
+services:
+  alanoded:
+    image: alaio/ala:v1.2.4
+    build:
+      context: .
+      dockerfile: Dockerfile
+      #args:
+      #  branch: master
+
+    command: /opt/alaio/bin/alanoded.sh --verbose-http-errors --max-transaction-time=1000 --data-dir /opt/alaio/bin/data-dir -e --http-alias=alanoded:8888 --http-alias=127.0.0.1:8888 --http-alias=localhost:8888 --access-control-allow-origin "*"
+    hostname: alanoded
+    ports:
+      - 8888:8888
+      - 9876:9876
+    expose:
+      - "8888"
+
+  kalad:
+    image: alaio/ala:v1.2.4
+    command: /opt/alaio/bin/kalad --wallet-dir /opt/alaio/bin/data-dir --http-server-address=127.0.0.1:8900 --http-alias=kalad:8900 --http-alias=localhost:8900
+    hostname: kalad
+    ports:
+      - 8900:8900
+    links:
+      - alanoded
