@@ -1,5 +1,5 @@
-const {Signature, PublicKey} = require('alaexplorerjs-ecc-v4.0.4')
-const Fcbuffer = require('alaexplorerjs-fcbuffer-v2.2.2')
+const {Signature, PublicKey} = require('ala-ecc4')
+const Fcbuffer = require('alafcbuffer22')
 const ByteBuffer = require('bytebuffer')
 const assert = require('assert')
 

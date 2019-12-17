@@ -1,8 +1,8 @@
 const assert = require('assert')
-const ecc = require('alaexplorerjs-ecc-v4.0.4')
-const Fcbuffer = require('alaexplorerjs-fcbuffer-v2.2.2')
+const ecc = require('ala-ecc4')
+const Fcbuffer = require('alafcbuffer22')
 const createHash = require('create-hash')
-const {processArgs} = require('alaexplorerjs-api-v7.0.4')
+const {processArgs} = require('ala-api7')
 const Structs = require('./structs')
 
 module.exports = writeApiGen

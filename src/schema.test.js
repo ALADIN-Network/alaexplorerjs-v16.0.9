@@ -1,7 +1,7 @@
 /* eslint-env mocha */
 
 const assert = require('assert')
-const Fcbuffer = require('alaexplorerjs-fcbuffer-v2.2.2')
+const Fcbuffer = require('alafcbuffer22')
 
 const schema = require('./schema')
 

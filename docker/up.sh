@@ -21,7 +21,7 @@ alacli wallet import --private-key 5HzzqBmg4DeneRqNRznPiBubRDGEPdcVjGZCTMGjGJWJu
 
 # Create accounts must happen before alaio.system is installed
 
-# Test accounts (for alaexplorerjs-v16.0.9)
+# Test accounts (for alaexplorerjs16)
 alacli create account alaio inita $owner_pubkey $active_pubkey
 alacli create account alaio initb $owner_pubkey $active_pubkey
 alacli create account alaio initc $owner_pubkey $active_pubkey

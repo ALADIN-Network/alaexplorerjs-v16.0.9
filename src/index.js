@@ -1,6 +1,6 @@
-const ecc = require('alaexplorerjs-ecc-v4.0.4')
-const Fcbuffer = require('alaexplorerjs-fcbuffer-v2.2.2')
-const AlaApi = require('alaexplorerjs-api-v7.0.4')
+const ecc = require('ala-ecc4')
+const Fcbuffer = require('alafcbuffer22')
+const AlaApi = require('ala-api7')
 const assert = require('assert')
 
 const Structs = require('./structs')

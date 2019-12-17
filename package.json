@@ -1,5 +1,5 @@
 {
-  "name": "alaexplorerjs-v16.0.9",
+  "name": "alaexplorerjs16",
   "version": "16.0.9",
   "description": "General purpose library for the ALA blockchain.",
   "main": "lib/index.js",
@@ -24,18 +24,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ALADIN-Network/alaexplorerjs-v16.0.9.git"
+    "url": "git+https://github.com/ALADIN-Network/alaexplorerjs16.git"
   },
   "keywords": [
-    "ALA",
+    "ALADIN",
     "Blockchain"
   ],
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ALADIN-Network/alaexplorerjs-v16.0.9/issues"
+    "url": "https://github.com/ALADIN-Network/alaexplorerjs16/issues"
   },
-  "homepage": "https://github.com/ALADIN-Network/alaexplorerjs-v16.0.9#readme",
+  "homepage": "https://github.com/ALADIN-Network/alaexplorerjs16#readme",
   "devDependencies": {
     "babel-cli": "6.26.0",
     "babel-core": "6.26.3",
@@ -46,7 +46,7 @@
     "browserify": "14.4.0",
     "camel-case": "^3.0.0",
     "coveralls": "^3.0.0",
-    "alaexplorerjs-keygen-v1.3.2": "^1.3.2",
+    "alakeygen1": "^1.3.2",
     "jsdoc-to-markdown": "^3.0.4",
     "mocha": "^5.2.0",
     "nyc": "^13.0.1",
@@ -57,9 +57,9 @@
     "babel-runtime": "6.26.0",
     "binaryen": "^37.0.0",
     "create-hash": "^1.1.3",
-    "alaexplorerjs-api-v7.0.4": "7.0.4",
-    "alaexplorerjs-ecc-v4.0.4": "4.0.4",
-    "alaexplorerjs-fcbuffer-v2.2.2": "2.2.2"
+    "ala-api7": "7.0.4",
+    "ala-ecc4": "4.0.4",
+    "alafcbuffer22": "2.2.2"
   },
   "babel": {
     "presets": [

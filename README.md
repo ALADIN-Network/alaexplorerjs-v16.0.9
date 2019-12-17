@@ -1,22 +1,22 @@
-[![Build Status](https://travis-ci.org/ALAIO/alaexplorerjs-v16.0.9.svg?branch=master)](https://travis-ci.org/ALAIO/alaexplorerjs-v16.0.9)
-[![NPM](https://img.shields.io/npm/v/alaexplorerjs-v16.0.9.svg)](https://www.npmjs.org/package/alaexplorerjs-v16.0.9)
+[![Build Status](https://travis-ci.org/ALAIO/alaexplorerjs16.svg?branch=master)](https://travis-ci.org/ALAIO/alaexplorerjs16)
+[![NPM](https://img.shields.io/npm/v/alaexplorerjs16.svg)](https://www.npmjs.org/package/alaexplorerjs16)
 
-# Alaexplorerjs-v16.0.9
+# alaexplorerjs16
 
 General purpose library for ALAIO blockchains.
 
 ### Versions
 
-| [ALAIO/alaexplorerjs-v16.0.9](/ALAIO/alaexplorerjs-v16.0.9) | [Npm](https://www.npmjs.com/package/alaexplorerjs-v16.0.9) | [ALAIO/ala](https://github.com/ALADIN-Network/ala) | [Docker Hub](https://hub.docker.com/r/alaio/ala/) |
+| [ALAIO/alaexplorerjs16](/ALAIO/alaexplorerjs16) | [Npm](https://www.npmjs.com/package/alaexplorerjs16) | [ALAIO/ala](https://github.com/ALADIN-Network/ala) | [Docker Hub](https://hub.docker.com/r/alaio/ala/) |
 | --- | --- | --- | --- |
-| tags: 16.0.0 - 16.0.9 | `npm install alaexplorerjs-v16.0.9` | tags: v1.1.n - v1.2.4 | alaio/ala:v1.2.4 |
+| tags: 16.0.0 - 16.0.9 | `npm install alaexplorerjs16` | tags: v1.1.n - v1.2.4 | alaio/ala:v1.2.4 |
 
 Prior [version](./docs/prior_versions.md) matrix.
 
 ### Usage
 
-* Install with: `npm install alaexplorerjs-v16.0.9`
-* Html script tag, see [releases](https://github.com/ALADIN-Network/alaexplorerjs-v16.0.9/releases) for the correct **version** and its matching script **integrity** hash.
+* Install with: `npm install alaexplorerjs16`
+* Html script tag, see [releases](https://github.com/ALADIN-Network/alaexplorerjs16/releases) for the correct **version** and its matching script **integrity** hash.
 
 ```html
 <!--
@@ -27,7 +27,7 @@ sha512-VKOxq8R14PpPh4nbLvD8DtxxTv1UmZp7pb3+P8IOQ36m3PBJpm6cd8pI8WRI6d9/aozwADKb3
 <html>
 <head>
   <meta charset="utf-8">
-  <script src="https://cdn.jsdelivr.net/npm/alaexplorerjs-v16.0.9@16.0.9/lib/ala.min.js"
+  <script src="https://cdn.jsdelivr.net/npm/alaexplorerjs16@16.0.9/lib/ala.min.js"
     integrity="sha512-zhPSKFEBlDVvUzjl9aBS66cI8tDYoLetynuKvIekHT8NZZ12oxwcZ//M/eT/2Rb/pR/cjFvLD8104Cy//sdEnA=="
     crossorigin="anonymous"></script>
 
@@ -64,10 +64,10 @@ sha512-VKOxq8R14PpPh4nbLvD8DtxxTv1UmZp7pb3+P8IOQ36m3PBJpm6cd8pI8WRI6d9/aozwADKb3
 
 ### Usage
 
-Ways to instantiate alaexplorerjs-v16.0.9.
+Ways to instantiate alaexplorerjs16.
 
 ```js
-Ala = require('alaexplorerjs-v16.0.9')
+Ala = require('alaexplorerjs16')
 
 // Private key or keys (array) provided statically or by way of a function.
 // For multiple keys, the get_required_keys API is used (more on that below).
@@ -85,11 +85,11 @@ ala = Ala({httpEndpoint: null, chainId, keyProvider})
 // Add support for non-ALA public key prefixes, such as PUB, etc
 ala = Ala({keyPrefix: 'PUB'})
 
-// Read-only instance when 'alaexplorerjs-v16.0.9' is already a dependency
+// Read-only instance when 'alaexplorerjs16' is already a dependency
 ala = Ala.modules.api({/*config*/})
 
 // Read-only instance when an application never needs to write (smaller library)
-AlaApi = require('alaexplorerjs-api-v7.0.4')
+AlaApi = require('ala-api7')
 ala = AlaApi({/*config*/})
 ```
 
@@ -136,12 +136,12 @@ ala.getInfo((error, result) => { console.log(error, result) })
 
 Chain and history API functions are available after creating the `ala` object.
 
-* [API](https://github.com/ALADIN-Network/alaexplorerjs-v16.0.9-api-v7.0.4/blob/master/docs/api.md#ala--object)
+* [API](https://github.com/ALADIN-Network/alaexplorerjs16-api-v7.0.4/blob/master/docs/api.md#ala--object)
 
 ### Configuration
 
 ```js
-Ala = require('alaexplorerjs-v16.0.9')
+Ala = require('alaexplorerjs16')
 
 // Default configuration
 config = {
@@ -176,7 +176,7 @@ ala = Ala(config)
 * **keyPrefix** `[string='ALA']` - Change the public key prefix.
 
 * **httpEndpoint** `string` - http or https location of a alanoded server
-  providing a chain API.  When using alaexplorerjs-v16.0.9 from a browser remember to configure
+  providing a chain API.  When using alaexplorerjs16 from a browser remember to configure
   the same origin policy in alanoded or proxy server.  For testing, alanoded
   configuration `access-control-allow-origin = *` could be used.
 
@@ -204,9 +204,9 @@ ala = Ala(config)
   * `null|undefined` - broadcast as usual
 
 * **transactionHeaders** (advanced) - manually calculate transaction header.  This
-  may be provided so alaexplorerjs-v16.0.9 does not need to make header related API calls to
+  may be provided so alaexplorerjs16 does not need to make header related API calls to
   alanode.  Used in environments like cold-storage.  This callback is called for
-  every transaction. Headers are documented here [alaexplorerjs-api-v7.0.4#headers](https://github.com/ALADIN-Network/alaexplorerjs-api-v7.0.4/blob/HEAD/docs/index.md#headers--object).
+  every transaction. Headers are documented here [ala-api7#headers](https://github.com/ALADIN-Network/ala-api7/blob/HEAD/docs/index.md#headers--object).
   * `transactionHeaders: (expireInSeconds, callback) => {callback(null/*error*/, headers)}`
 
 * **logger** - default logging configuration.
@@ -219,7 +219,7 @@ ala = Ala(config)
 
   For example, redirect error logs: `config.logger = {error: (...args) => ..}`
 
-* **authorization** - replace the default alaexplorerjs-v16.0.9 authorization on actions.  An
+* **authorization** - replace the default alaexplorerjs16 authorization on actions.  An
   authorization provided here may still be over-written by specifying an
   authorization for each individual action.
 
@@ -349,8 +349,8 @@ ala.transfer('inita', 'initb', '1.4000 SYS', '', false)
 ```
 
 Read-write API methods and documentation are generated from the alaio
-[token](https://github.com/ALADIN-Network/alaexplorerjs-v16.0.9/blob/master/src/schema/alaio_token.json) and
-[system](https://github.com/ALADIN-Network/alaexplorerjs-v16.0.9/blob/master/src/schema/alaio_system.json).
+[token](https://github.com/ALADIN-Network/alaexplorerjs16/blob/master/src/schema/alaio_token.json) and
+[system](https://github.com/ALADIN-Network/alaexplorerjs16/blob/master/src/schema/alaio_system.json).
 
 Assets amounts require zero padding.  For a better user-experience, if you know
 the correct precision you may use DecimalPad to add the padding.
@@ -363,7 +363,7 @@ assert.equal('10.2000', DecimalPad(userInput, precision))
 ```
 
 For more advanced signing, see `keyProvider` and `signProvider` in
-[index.test.js](https://github.com/ALADIN-Network/alaexplorerjs-v16.0.9/blob/master/src/index.test.js).
+[index.test.js](https://github.com/ALADIN-Network/alaexplorerjs16/blob/master/src/index.test.js).
 
 ### Shorthand
 
@@ -573,7 +573,7 @@ await myaccount.transaction(myaccountTr => {
 
 # Development
 
-From time-to-time the alaexplorerjs-v16.0.9 and alanode binary format will change between releases
+From time-to-time the alaexplorerjs16 and alanode binary format will change between releases
 so you may need to start `alanode` with the `--skip-transaction-signatures` parameter
 to get your transactions to pass.
 
@@ -612,7 +612,7 @@ Use Node v10+ for `package-lock.json`.
 
 # Related Libraries
 
-These libraries are integrated into `alaexplorerjs-v16.0.9` seamlessly so you probably do not
+These libraries are integrated into `alaexplorerjs16` seamlessly so you probably do not
 need to use them directly.  They are exported here giving more API access or
 in some cases may be used standalone.
 
@@ -623,24 +623,24 @@ var {format, api, ecc, json, Fcbuffer} = Ala.modules
   * Blockchain name validation
   * Asset string formatting
 
-* alaexplorerjs-api-v7.0.4 [[Github](https://github.com/ALADIN-Network/alaexplorerjs-api-v7.0.4), [NPM](https://www.npmjs.org/package/alaexplorerjs-api-v7.0.4)]
+* ala-api7 [[Github](https://github.com/ALADIN-Network/ala-api7), [NPM](https://www.npmjs.org/package/ala-api7)]
   * Remote API to an ALA blockchain node (alanode)
   * Use this library directly if you need read-only access to the blockchain
     (don't need to sign transactions).
 
-* alaexplorerjs-ecc-v4.0.4 [[Github](https://github.com/ALADIN-Network/alaexplorerjs-ecc-v4.0.4), [NPM](https://www.npmjs.org/package/alaexplorerjs-ecc-v4.0.4)]
+* ala-ecc4 [[Github](https://github.com/ALADIN-Network/ala-ecc4), [NPM](https://www.npmjs.org/package/ala-ecc4)]
   * Private Key, Public Key, Signature, AES, Encryption / Decryption
   * Validate public or private keys
   * Encrypt or decrypt with ALA compatible checksums
   * Calculate a shared secret
 
-* json {[api](https://github.com/ALADIN-Network/alaexplorerjs-api-v7.0.4/blob/master/src/api), [schema](https://github.com/ALADIN-Network/alaexplorerjs-v16.0.9/blob/master/src/schema)},
+* json {[api](https://github.com/ALADIN-Network/ala-api7/blob/master/src/api), [schema](https://github.com/ALADIN-Network/alaexplorerjs16/blob/master/src/schema)},
   * Blockchain definitions (api method names, blockchain schema)
 
-* alaexplorerjs-keygen-v1.3.2 [[Github](https://github.com/ALADIN-Network/alaexplorerjs-keygen-v1.3.2), [NPM](https://www.npmjs.org/package/alaexplorerjs-keygen-v1.3.2)]
+* alakeygen1 [[Github](https://github.com/ALADIN-Network/alakeygen1), [NPM](https://www.npmjs.org/package/alakeygen1)]
   * private key storage and key management
 
-* Fcbuffer [[Github](https://github.com/ALADIN-Network/alaexplorerjs-fcbuffer-v2.2.2), [NPM](https://www.npmjs.org/package/alaexplorerjs-fcbuffer-v2.2.2)]
+* Fcbuffer [[Github](https://github.com/ALADIN-Network/alafcbuffer22), [NPM](https://www.npmjs.org/package/alafcbuffer22)]
   * Binary serialization used by the blockchain
   * Clients sign the binary form of the transaction
   * Allows client to know what it is signing

@@ -21,7 +21,7 @@ The [ALAIO developer docs](https://developers.ala.io/alaio-alanode/docs/docker-q
 # Unit Test
 
 Run all unit test in a temporary instance.  Note, this script will run
-`npm install` in the alaexplorerjs-v16.0.9 directory.
+`npm install` in the alaexplorerjs16 directory.
 
 `./run_tests.sh`
 

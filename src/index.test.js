@@ -4,7 +4,7 @@ const fs = require('fs')
 
 const Ala = require('.')
 const {ecc} = Ala.modules
-const {Keystore} = require('alaexplorerjs-keygen-v1.3.2')
+const {Keystore} = require('alakeygen1')
 
 const wif = '5HzzqBmg4DeneRqNRznPiBubRDGEPdcVjGZCTMGjGJWJubKm2Pe'
 
@@ -311,7 +311,7 @@ describe('keyProvider', () => {
     })
   })
 
-  it('from alaexplorerjs-keygen-v1.3.2', () => {
+  it('from alakeygen1', () => {
     const keystore = Keystore('uid')
     keystore.deriveKeys({parent: wif})
     const ala = Ala({keyProvider: keystore.keyProvider})
